@@ -1,17 +1,13 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-8d59dc4de5201274e310e4c54b9627a8934c3b88527886e3b421487c677d23eb.svg)](https://classroom.github.com/a/pVmkMH6A)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10773057&assignment_repo_type=AssignmentRepo)
-
-![Proyecto #1 - Control de Temperatura](https://user-images.githubusercontent.com/46485082/231823828-3e1c6a9e-db99-4b71-8ef1-c43b8b24c2d5.png)
+![Proyecto #1 - Bibliografia y Soporte](https://user-images.githubusercontent.com/46485082/231849512-1f710432-3cb3-4b83-8d2b-5f4201dfc2c7.png)
 
 
-## TEAM 
 
-- [ARRIOLA, Dario Raul](https://github.com/dr-arriola "Programacion" )
-- [GAZZOLA, Oscar Antonio](https://github.com/OscarAGazzola "Electronica y Programacion")
-- [PALACIOS, Alfredo Sebastian](https://github.com/alfredop37 "Programacion")
-- [PAZ, Rodolfo](https://github.com/Domi74 "Electronica")
-- [RIPOLI, Enrique Alfredo](https://github.com/enriqueripoli "Modelado y Control")
-- [SEGNANA, Miguel Angel](https://github.com/guelo2019 "Scrum Master")
+## RECURSOS WEB: ##
+
+https://www.luisllamas.es/teoria-de-control-en-arduino-el-controlador-pid/
+
+
+
 
 
 
