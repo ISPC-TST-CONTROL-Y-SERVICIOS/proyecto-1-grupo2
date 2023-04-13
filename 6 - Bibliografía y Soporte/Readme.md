@@ -19,6 +19,6 @@
 
 
 
-## DOCUMENTOS #  
+## PAPERS #  
 
 En esta carpeta encontraran documentacion de soporte de los diferentes componentes del proyecto.
