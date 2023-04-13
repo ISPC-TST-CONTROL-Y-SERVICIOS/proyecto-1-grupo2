@@ -6,7 +6,12 @@
 
 ## TEAM 
 
-- 
+- ARRIOLA, Dario Raul
+- GAZZOLA, Oscar Antonio
+- PALACIOS, Alfredo Sebastian
+- PAZ, Rodolfo
+- RIPOLI, Enrique Alfredo
+- [SEGNANA, Miguel Angel](https://github.com/guelo2019 "guelo2019 - Github - TST")
 
 
 
