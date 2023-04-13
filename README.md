@@ -4,8 +4,9 @@
 ![Proyecto #1 - Control de Temperatura](https://user-images.githubusercontent.com/46485082/231823828-3e1c6a9e-db99-4b71-8ef1-c43b8b24c2d5.png)
 
 
-# TEAM #
+## TEAM 
 
+- 
 
 
 
