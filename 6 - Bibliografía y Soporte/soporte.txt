@@ -1,4 +1,0 @@
-
-## RECURSOS #
-
-https://www.luisllamas.es/teoria-de-control-en-arduino-el-controlador-pid/
