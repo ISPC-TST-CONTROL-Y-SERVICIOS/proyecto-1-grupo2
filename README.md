@@ -6,12 +6,12 @@
 
 ## TEAM 
 
-- ARRIOLA, Dario Raul
-- GAZZOLA, Oscar Antonio
-- PALACIOS, Alfredo Sebastian
-- PAZ, Rodolfo
-- RIPOLI, Enrique Alfredo
-- [SEGNANA, Miguel Angel](https://github.com/guelo2019 "guelo2019 - Github - TST")
+- [ARRIOLA, Dario Raul](https://github.com/dr-arriola "Programacion" )
+- [GAZZOLA, Oscar Antonio](https://github.com/OscarAGazzola "Electronica y Programacion")
+- [PALACIOS, Alfredo Sebastian](https://github.com/alfredop37 "Programacion")
+- [PAZ, Rodolfo](https://github.com/Domi74 "Electronica")
+- [RIPOLI, Enrique Alfredo](https://github.com/enriqueripoli "Modelado y Control")
+- [SEGNANA, Miguel Angel](https://github.com/guelo2019 "Scrum Master")
 
 
 
