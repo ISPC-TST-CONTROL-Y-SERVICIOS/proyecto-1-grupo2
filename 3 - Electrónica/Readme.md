@@ -9,7 +9,10 @@
 
 
 ## Placa base de desarrollo: ##
+La placa base a utilizar sera la ESP32, el cual cuenta con la cantidad necesaria de entradas como de salidas para poder implementar el prototipo de Control de Temperatura
 
+
+\textcolor{red}{el\_texto}
 
 ## Sensores de temperaturas: ##
 
