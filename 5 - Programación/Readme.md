@@ -5,30 +5,45 @@
 
 
 
+## $\textcolor{orange}{Lenguaje\ de\ programacion:}$
 
-
-## Lenguaje de programacion: ##
-
-
-## Sistema de control: ##
-
-
-## Librerias: ##
-
-
-## Codigo: ##
-
-
-## Simulacion : ##
+> __Note__ : Describir brevemente el lenguaje elegido para la programacion.
 
 
 
-## agregar titulo: ##
+## $\textcolor{orange}{Sistema\ de\ control:}$
+
+> __Note__ : Describir brevemente el principio sobre el cual se basa el dispositivo.
 
 
 
 
-## PAPERS #  
+## $\textcolor{orange}{Librerias:}$
 
-En esta carpeta encontraran documentacion de soporte de los diferentes componentes del proyecto.
+> __Note__ : Mencionar las librerias que se utilizan para que el desarrollo pueda funcionar correctamente.
+
+
+
+## $\textcolor{orange}{Codigo:}$
+
+> __Note__ : Pegar aqui el Codigo.
+
+```python
+
+codigo aqui
+
+```
+
+
+
+
+## $\textcolor{orange}{Simulacion:}$
+
+> __Note__ : Mencionar la simulacion realizada y pegar aqui, si es posible, print del mismo.
+
+
+
+## $\textcolor{orange}{PAPERS:}$
+
+> __Note__ : En esta carpeta encontraran documentacion de soporte de los diferentes componentes del proyecto.
 
