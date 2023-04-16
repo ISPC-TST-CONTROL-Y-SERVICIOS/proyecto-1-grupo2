@@ -86,6 +86,9 @@ Como se ve en el gráfico, la curva es considerablemente suave como para no perc
 
 ## $\textcolor{orange}{Descripcion\ del\ principio\ de\ funcionamiento:}$
 
+> __Note__ :
+
+Aqui se agrega la descripcion general del principio de funcionamiento del dispositivo.
 
 ## $\textcolor{orange}{Eleccion\ de\ la\ placa\ de\ desarrollo:}$
 
