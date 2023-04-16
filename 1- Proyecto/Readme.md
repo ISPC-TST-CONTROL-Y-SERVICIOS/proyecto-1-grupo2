@@ -2,25 +2,25 @@
 
 
 
-
-## Descripción del proyecto: ##
-
-
-## Descripcion del principio de funcionamiento: ##
+## $\textcolor{orange}{Descripción\ del\ proyecto:}$
 
 
-## Eleccion de la placa de desarrollo: ##
+## $\textcolor{orange}{Descripcion\ del\ principio\ de\ funcionamiento:}$
 
 
-## Sensores y Actuadores: ##
+## $\textcolor{orange}{Eleccion\ de\ la\ placa\ de\ desarrollo:}$
 
 
-
-## Esquema electrico del controlador: ##
+## $\textcolor{orange}{Sensores\ y\ Actuadores:}$
 
 
 
+## $\textcolor{orange}{Esquema\ electrico\ del\ controlador:}$
 
-## PAPERS #  
+
+
+
+## $\textcolor{orange}{PAPERS:}$
+
 
 En esta carpeta encontraran documentacion de soporte de los diferentes componentes del proyecto.
