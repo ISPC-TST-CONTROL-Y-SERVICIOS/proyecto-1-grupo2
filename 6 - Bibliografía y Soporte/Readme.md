@@ -13,6 +13,7 @@
 - https://randomnerdtutorials.com/micropython-ds18b20-esp32-esp8266/
 - https://randomnerdtutorials.com/micropython-esp32-esp8266-dht11-dht22-web-server/
 - https://www.youtube.com/watch?v=bkwpYn0uNag&ab_channel=lasmatematicas.es
+- https://www.youtube.com/watch?v=TAMXQWuOHrc
 
 
 
