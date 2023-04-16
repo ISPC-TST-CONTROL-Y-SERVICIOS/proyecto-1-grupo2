@@ -31,7 +31,7 @@ Aqui poner fotos de la maqueta armada.
 ## ${\color{orange}Fotos:}$
 
 > __Note__ :
-Aqui poner fotos del proceso de armado y de votos varias.
+Aqui poner fotos del proceso de armado y de fotos varias.
 
 ## ${\color{orange}PAPERS:}$
 
