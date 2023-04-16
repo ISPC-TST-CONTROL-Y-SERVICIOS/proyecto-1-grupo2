@@ -3,25 +3,27 @@
 
 
 
+## $\textcolor{orange}{Descripción\ del\ dispositivo:}$
 
-## Descripción del proyecto: ##
+> __Note__ : Describir el dispositivo, funcionalidades, ventajas y desventajas, etc.
 
+## $\textcolor{orange}{Utilizacion:}$
 
-## Descripcion de su utilizacion: ##
+> __Note__ : Describir para que y donde se utiliza el dispositivo.
 
+## $\textcolor{orange}{Insercion\ en\ un\ sistema\ de\ climatizacion:}$
 
-## Insercion en un sistema domotico: ##
+> __Note__ : Describir como se acopla a un sistema ya existente de climatizacion.
 
+## $\textcolor{orange}{Instalacion:}$
 
-## Instalacion: ##
+> __Note__ : Describir como se instala el dispositivo y sus sensores.
 
+## $\textcolor{orange}{Solucion\ a\ posibles\ fallos\:}$
 
+> __Note__ : Describir las psoibles fallas y sus soluciones.
 
-## Solucion a posibles fallos: ##
+## $\textcolor{orange}{PAPERS:}$
 
-
-
-
-## PAPERS #  
 
 En esta carpeta encontraran documentacion de soporte de los diferentes componentes del proyecto.
