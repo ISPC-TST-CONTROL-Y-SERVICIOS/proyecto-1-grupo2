@@ -89,9 +89,50 @@ Como se ve en el gráfico, la curva es considerablemente suave como para no perc
 
 ## $\textcolor{orange}{Eleccion\ de\ la\ placa\ de\ desarrollo:}$
 
+La placa base para el desarrollo es la ESP32.
+El ESP32 es una placa de desarrollo de bajo costo y alto rendimiento basada en un chip de microcontrolador de doble núcleo Tensilica LX6 de 32 bits.
+Es una plataforma popular para proyectos de Internet de las cosas (IoT) debido a sus capacidades Wi-Fi, Bluetooth y bajo consumo de energía.
+
+
+Algunas de sus ventajas son:
+
+* Es fácil de programar y es compatible con el entorno de desarrollo integrado (IDE) de Arduino.
+* Es una placa de desarrollo muy económica en comparación con otras plataformas de hardware similares.
+* Tiene un bajo consumo de energía y puede operar con baterías durante un largo período de tiempo.
+* Tiene una capacidad incorporada de Wi-Fi y Bluetooth, lo que lo hace fácilmente conectable a otros dispositivos IoT.
+
+Algunas de sus desventajas en comparación con otras placas de desarrollo son:
+
+* La memoria RAM disponible es limitada, lo que puede ser una limitación para algunos proyectos.
+* No tiene soporte para comunicación de alta velocidad, como USB 3.0.
+* Aunque es compatible con Arduino, no tiene una comunidad tan grande como otras placas de desarrollo de código abierto.
+
+
+![ESP32](https://user-images.githubusercontent.com/46485082/232334510-c55dec8f-d9e6-456f-92dc-0de1c38f7594.png)
+
 
 ## $\textcolor{orange}{Sensores\ y\ Actuadores:}$
 
+El sensor de temperatura propuesto es el  DS18B20, el mismo es un dispositivo digital de medición de temperatura de alta precisión que utiliza una interfaz de 
+bus serie de 1 cable 
+(protocolo 1 Wire de Dasllas Semiconductor) . 
+Es capaz de medir temperaturas en un rango de -55 °C a 125 °C con una precisión de ± 0.5 °C. 
+
+Algunas de sus ventajas son:
+
+* Comunicación de datos a través de un solo cable, lo que simplifica su conexión y reduce el costo del sistema.
+* No necesita calibración debido a su alta precisión y bajo error de medición.
+* Es resistente al agua y puede ser sumergido en líquidos.
+* Es compatible con una amplia variedad de microcontroladores y dispositivos electrónicos.
+
+Algunas de sus desventajas en comparación con otros sensores de temperatura son:
+
+* El rango de medición es menor en comparación con otros sensores de temperatura.
+* Es más costoso en comparación con algunos sensores de temperatura analógicos.
+* No tiene una respuesta de temperatura inmediata ya que necesita un tiempo para alcanzar la estabilidad térmica.
+* No tiene la capacidad de medir la temperatura de la superficie en contacto con el sensor.
+
+![image](https://user-images.githubusercontent.com/46485082/232333839-a2e7106b-7764-4c70-a872-2db3823f146c.png)
 
 
 ## $\textcolor{orange}{Esquema\ electrico\ del\ controlador:}$
