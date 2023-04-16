@@ -140,7 +140,9 @@ Algunas de sus desventajas en comparación con otros sensores de temperatura son
 
 ## $\textcolor{orange}{Esquema\ electrico\ del\ controlador:}$
 
+> __Note__ :
 
+Aqui se agrega  el esquema electrico del dispositivo.
 
 
 ## $\textcolor{orange}{PAPERS:}$
