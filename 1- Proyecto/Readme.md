@@ -86,9 +86,15 @@ Como se ve en el gráfico, la curva es considerablemente suave como para no perc
 
 ## $\textcolor{orange}{Descripcion\ del\ principio\ de\ funcionamiento:}$
 
-> __Note__ :
+El controlador PID (Proporcional-Integral-Derivativo) es un algoritmo utilizado para controlar sistemas en tiempo real, incluyendo sistemas de refrigeración. El objetivo del controlador es ajustar automáticamente la cantidad de enfriamiento suministrada por el sistema para mantener una temperatura deseada.
 
-Aqui se agrega la descripcion general del principio de funcionamiento del dispositivo.
+En el caso de la refrigeración con dos sensores DHT11 y DHT22 y una placa de desarrollo ESP32, los sensores miden la temperatura y la humedad ambiente, y envían esta información a la placa ESP32. La placa utiliza esta información para calcular el error entre la temperatura deseada y la temperatura actual, y luego ajusta la cantidad de enfriamiento proporcionado por el sistema de refrigeración para minimizar ese error.
+
+El control PID utiliza tres parámetros: la ganancia proporcional, la ganancia integral y la ganancia derivativa. Estos parámetros ajustan la cantidad de corrección que se aplica al sistema en función de la magnitud y la dirección del error. En otras palabras, si el error es grande y está aumentando, el controlador aumentará la cantidad de enfriamiento proporcionada para corregirlo. Si el error es pequeño y está disminuyendo, el controlador reducirá la cantidad de enfriamiento para evitar sobrecorrección.
+
+En resumen, el control PID para refrigeración con dos sensores DHT11 y DHT22 y una placa de desarrollo ESP32 utiliza la información de los sensores para ajustar automáticamente la cantidad de enfriamiento proporcionada por el sistema para mantener una temperatura deseada, y utiliza una combinación de ganancia proporcional, ganancia integral y ganancia derivativa para minimizar el error y evitar sobrecorrección.
+
+
 
 ## $\textcolor{orange}{Eleccion\ de\ la\ placa\ de\ desarrollo:}$
 
@@ -116,26 +122,20 @@ Algunas de sus desventajas en comparación con otras placas de desarrollo son:
 
 ## $\textcolor{orange}{Sensores\ y\ Actuadores:}$
 
-El sensor de temperatura propuesto es el  DS18B20, el mismo es un dispositivo digital de medición de temperatura de alta precisión que utiliza una interfaz de 
-bus serie de 1 cable 
-(protocolo 1 Wire de Dasllas Semiconductor) . 
-Es capaz de medir temperaturas en un rango de -55 °C a 125 °C con una precisión de ± 0.5 °C. 
+Tanto el sensor DHT11 como el DHT22 son sensores de humedad y temperatura de la familia de sensores digitales de un solo cable de la marca "Aosong". Ambos sensores utilizan un termistor para medir la temperatura y un sensor capacitivo para medir la humedad relativa del aire.
 
-Algunas de sus ventajas son:
+El DHT11 es el modelo más básico y económico de los dos, y tiene una precisión de ± 2 grados Celsius para la medición de temperatura y ± 5% de humedad relativa para la medición de humedad. Tiene un rango de medición de 0 a 50 grados Celsius para la temperatura y del 20% al 80% para la humedad relativa.
 
-* Comunicación de datos a través de un solo cable, lo que simplifica su conexión y reduce el costo del sistema.
-* No necesita calibración debido a su alta precisión y bajo error de medición.
-* Es resistente al agua y puede ser sumergido en líquidos.
-* Es compatible con una amplia variedad de microcontroladores y dispositivos electrónicos.
+Por otro lado, el DHT22 tiene una mayor precisión que el DHT11, con una precisión de ± 0.5 grados Celsius para la medición de temperatura y ± 2% de humedad relativa para la medición de humedad. Tiene un rango de medición de -40 a 80 grados Celsius para la temperatura y del 0% al 100% para la humedad relativa.
 
-Algunas de sus desventajas en comparación con otros sensores de temperatura son:
+Ambos sensores son ampliamente utilizados en proyectos de electrónica y robótica para medir la temperatura y la humedad del ambiente, y son compatibles con una amplia gama de microcontroladores y placas de desarrollo, como la ESP32 mencionada anteriormente.
 
-* El rango de medición es menor en comparación con otros sensores de temperatura.
-* Es más costoso en comparación con algunos sensores de temperatura analógicos.
-* No tiene una respuesta de temperatura inmediata ya que necesita un tiempo para alcanzar la estabilidad térmica.
-* No tiene la capacidad de medir la temperatura de la superficie en contacto con el sensor.
+![image](https://user-images.githubusercontent.com/46485082/233860876-b120d3d3-ec9e-474c-adc5-ccb7ecfc0a25.png)
 
-![image](https://user-images.githubusercontent.com/46485082/232333839-a2e7106b-7764-4c70-a872-2db3823f146c.png)
+Como actuador se utiliza un rele del tipo HK4100F, el cual proporciona una corriente maxima de 3A/250VCA, lo cual es suficiente para comandar cualquier otro actuador de mayor potencia como ser algun contactor.
+
+
+![conexion-rele](https://user-images.githubusercontent.com/46485082/233861167-1db9fb50-9c41-4def-a076-9b08ac166d65.png)
 
 
 ## $\textcolor{orange}{Esquema\ electrico\ del\ controlador:}$
