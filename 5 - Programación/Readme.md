@@ -121,6 +121,8 @@ El dispositivo fue simulado en Wokwi.
 
 https://wokwi.com/projects/362829563574636545
 
+![image](https://user-images.githubusercontent.com/46485082/233877863-977bc1a8-0b66-4a6d-8e4f-608715918872.png)
+
 
 
 ## $\textcolor{orange}{PAPERS:}$
