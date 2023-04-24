@@ -26,7 +26,7 @@
 
 ## $\textcolor{orange}{Codigo:}$
 
-> __Note__ : Se agrega codigo  en el cual se estuvo trabajando.
+> __Note__ : Se agrega codigo en C++ en el cual se estuvo trabajando.
 
 ```c++
 
