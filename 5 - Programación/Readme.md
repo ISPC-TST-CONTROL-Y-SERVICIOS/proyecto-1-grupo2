@@ -39,7 +39,9 @@ codigo aqui
 
 ## $\textcolor{orange}{Simulacion:}$
 
-> __Note__ : Mencionar la simulacion realizada y pegar aqui, si es posible, print del mismo.
+El dispositivo fue simulado en WOKWI.
+
+https://wokwi.com/projects/362829563574636545
 
 
 
