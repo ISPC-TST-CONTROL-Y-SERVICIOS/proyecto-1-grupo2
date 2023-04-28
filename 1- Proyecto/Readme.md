@@ -14,7 +14,9 @@ Locación donde se utilizará el sistema:
 
 En la imagen siguiente, las flechas negras indican la ubicación de los actuadores y las flechas azules la de los sensores.
 
-![image](https://user-images.githubusercontent.com/46485082/232330179-7fc4ff5d-1a46-4858-99cd-7c98618b0e98.png)
+![image](https://user-images.githubusercontent.com/46485082/235246291-2ebb14f0-7052-40ea-b790-83b55cadb9e6.png)
+
+
 
 Para el modelado matemático se tomo en cuenta que un sistema derivativo (D) o PID representaría variaciones muy amplias debido que en los momentos donde se activa el actuador se produce un cambio repentino de temperatura, por lo tanto, el error es considerablemente grande en ese periodo de tiempo. Teniendo esto en cuenta, se procedió al desarrollo de un sistema proporcional e integral (PI). El código para el control del sistema es el siguiente:
 
@@ -67,11 +69,13 @@ class CasaInteligente:
         plt.show()
 
 def main():
-           casa = CasaInteligente(27, K=10, tau=3)
-           casa.simular_dia(22, Kp=10, Ki=7)  #90,0.1,0
-           casa.graficar_temperaturas()
-           if __name__ == "__main__":
-     main()
+    casa = CasaInteligente(27, K=10, tau=3)
+    casa.simular_dia(22, Kp=10, Ki=7)  #90,0.1,0
+    casa.graficar_temperaturas()
+
+if __name__ == "__main__":
+    main()
+
 
 ```
 
