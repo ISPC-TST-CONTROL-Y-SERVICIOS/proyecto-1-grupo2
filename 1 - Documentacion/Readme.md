@@ -21,7 +21,7 @@ En la imagen siguiente, las flechas negras indican la ubicación de los actuador
 
 ![image](https://user-images.githubusercontent.com/46485082/235246291-2ebb14f0-7052-40ea-b790-83b55cadb9e6.png)
 
-El modelado matemático para un controlador PID consiste en desarrollar un modelo matemático que describe el comportamiento del sistema controlado y el comportamiento del controlador PID. Este modelo matemático se utiliza para analizar y diseñar el controlador PID.
+El modelado matemático es una herramienta importante para diseñar y optimizar el controlador. El modelado matemático permite simular y evaluar el rendimiento del controlador antes de implementarlo en un sistema físico, lo que ayuda a reducir el tiempo y los costos de desarrollo y mejora la eficiencia del proceso de diseño del controlador.
 
 En términos generales, el modelado matemático de un sistema de control PID implica tres pasos:
 
@@ -34,8 +34,56 @@ En términos generales, el modelado matemático de un sistema de control PID imp
 - [x] Simulación y evaluación: se simula el comportamiento del sistema controlado con el controlador PID diseñado. La simulación permite evaluar el 
       rendimiento del  controlador y ajustar los coeficientes del controlador según sea necesario.
 
-El modelado matemático es una herramienta importante para diseñar y optimizar el controlador. El modelado matemático permite simular y evaluar el rendimiento del controlador antes de implementarlo en un sistema físico, lo que ayuda a reducir el tiempo y los costos de desarrollo y mejora la eficiencia del proceso de diseño del controlador.
 
+## $\textcolor{orange}{Función\ de\ transferencia\ del\ proceso:}$
+
+Esta función es una herramienta que describe como un sistema dinámico responde a una entrada. Sirve
+para representar como la salida cambia en respuesta a una entrada. En la ecuación a continuación, T(s)
+es la temperatura actual en la transformada de Laplace, Td(s) es la temperatura deseada en la
+transformada de Laplace, K es la ganancia del sistema (representa la relación entre la señal de entrada y
+la de salida), y τ (tau) es la velocidad de respuesta del sistema a los cambios en la señal de entrada.
+
+![image](https://user-images.githubusercontent.com/46485082/235377585-665e762b-443c-4d91-8492-78dbda22d22b.png)
+
+
+## $\textcolor{orange}{Error\ del\ sistema:}$
+
+Esto se refiere a la diferencia entre la temperatura deseada y la temperatura real del departamento. La
+ecuación queda de la siguiente manera:
+
+![image](https://user-images.githubusercontent.com/46485082/235377606-12f325b7-da8a-4e28-83c8-f1d6391b5e7e.png)
+
+
+Donde E(t) corresponde al error, Td(t) corresponde a la temperatura deseada y T(t) a la temperatura real
+del departamento, todo esto evaluado en el tiempo t.
+
+## $\textcolor{orange}{Cálculo\ de\ términos\ PID:}$
+
+- [x] Término proporcional (P): se calcula multiplicando el error por una constante proporcional (Kp).
+
+![image](https://user-images.githubusercontent.com/46485082/235377627-fc4972aa-cbba-4578-8f7d-8654392326ee.png)
+
+
+- [x] Término integral (I): se calcula sumando el error a lo largo del tiempo y multiplicándolo por una constante integral (Ki).
+
+
+![image](https://user-images.githubusercontent.com/46485082/235377405-3f7a6c2e-edd5-4042-a96e-9bf8a6419b27.png)
+
+
+- [x] Término derivativo (D): es el producto la tasa de cambio del error por una constante derivativa (Kd):
+
+![image](https://user-images.githubusercontent.com/46485082/235377670-52301a6e-2dc9-4fc8-9a90-b7d48c47d518.png)
+
+## $\textcolor{orange}{PID:}$
+
+La suma de los tres componentes da como resultado el controlador PID, quedando de la siguiente
+manera:
+
+
+![image](https://user-images.githubusercontent.com/46485082/235377686-b1ec9275-2eee-4318-ade8-1a49707965bc.png)
+
+
+Donde g(t) es la señal de control enviada al sistema de control de temperatura.
 
 Un código en Python, como ejemplo, para el control del sistema es el siguiente:
 
@@ -51,31 +99,30 @@ class CasaInteligente:
         self.historial_temperaturas = [temperatura_inicial]
         self.K = K
         self.tau = tau
-        self.dt = 1.0 / 60  # Paso de tiempo en horas (1 minuto)
+        self.dt = 1.0 / 60 # Paso de tiempo en horas (1 minuto)
         self.error_integral = 0
         self.error_anterior = 0
-
+        
     def actualizar_temperatura(self, nueva_temperatura):
         self.temperatura_actual = nueva_temperatura
         self.historial_temperaturas.append(nueva_temperatura)
-
-    def controlador_pi(self, Kp, Ki):
+        
+    def controlador_pid(self, Kp, Ki, Kd):
         error = self.temperatura_deseada - self.temperatura_actual
         self.error_integral += error * self.dt
-     
-
-        u = Kp * error + Ki * self.error_integral
+        error_derivada = (error - self.error_anterior) / self.dt
+        u = Kp * error + Ki * self.error_integral + Kd * error_derivada
         self.error_anterior = error
         return u
-
-    def simular_dia(self, temperatura_deseada, Kp, Ki):
+    
+    def simular_dia(self, temperatura_deseada, Kp, Ki, Kd):
         self.temperatura_deseada = temperatura_deseada
-        for _ in range(24 * 60):  # Simular durante 24 horas en intervalos de 1 minuto
-            u = self.controlador_pi(Kp, Ki)
+        for _ in range(24 * 60): # Simular durante 24 horas en intervalos de 1 minuto
+            u = self.controlador_pid(Kp, Ki, Kd)
             dydt = (self.K * u - self.temperatura_actual) / self.tau
             nueva_temperatura = self.temperatura_actual + dydt * self.dt
             self.actualizar_temperatura(nueva_temperatura)
-
+    
     def graficar_temperaturas(self):
         plt.plot(np.arange(len(self.historial_temperaturas)) / 60, self.historial_temperaturas, label="Temperatura")
         plt.axhline(self.temperatura_deseada, color="r", linestyle="--", label="Temperatura deseada")
@@ -83,27 +130,35 @@ class CasaInteligente:
         plt.ylabel("Temperatura (°C)")
         plt.title("Control de temperatura en una casa inteligente")
         plt.legend()
-        plt.ylim(21,23)
+        plt.ylim(20,22)
         plt.xlim(0,1)
         plt.show()
 
 def main():
-    casa = CasaInteligente(27, K=10, tau=3)
-    casa.simular_dia(22, Kp=10, Ki=7)  #90,0.1,0
+    casa = CasaInteligente(25, K=7, tau=3)
+    casa.simular_dia(21, Kp=8, Ki=10, Kd=0.08)
     casa.graficar_temperaturas()
 
 if __name__ == "__main__":
     main()
 
 
+
 ```
 
-El gráfico del comportamiento queda de la siguiente manera:
+Luego de probar valores para Kp, Ki y Kd, se concluyó que los valores adecuados son los expresados en el
+código (Kp=8, Ki=10, Kd=0.08). Reduciendo el componente derivativo y aumentando los otros
+parámetros, se logra el comportamiento deseado. Mostrando un comportamiento de la siguiente
+manera:
 
-![image](https://user-images.githubusercontent.com/46485082/232332772-fda8ed1e-7f97-4ae8-a67e-85b9c0308c31.png)
+![image](https://user-images.githubusercontent.com/46485082/235377484-b013c4a4-07ca-43e4-9204-27f877e42695.png)
 
 
-Como se ve en el gráfico, la curva es considerablemente suave como para no percibir cambios abruptos de temperatura.
+
+En el plazo de una hora:
+
+![image](https://user-images.githubusercontent.com/46485082/235377494-a79899ef-d915-4432-b451-ce53cc5147cf.png)
+
 
 
 
@@ -132,7 +187,3 @@ En resumen, el control PID  utiliza la información de los sensores para ajustar
 Aqui se agrega  el esquema electrico del dispositivo.
 
 
-## $\textcolor{orange}{PAPERS:}$
-
-
-En esta carpeta encontraran documentacion de soporte de los diferentes componentes del proyecto.
