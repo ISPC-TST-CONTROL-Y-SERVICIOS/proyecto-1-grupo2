@@ -7,26 +7,26 @@
 
 ## $\textcolor{orange}{Lenguaje\ de\ programacion:}$
 
-> __Note__ : Describir brevemente el lenguaje elegido para la programacion.
+El lenguaje elejido para desarrollar el codigo es C++.
 
 
 
-## $\textcolor{orange}{Sistema\ de\ control:}$
+## $\textcolor{orange}{Librerias\ necesarias:}$
 
-> __Note__ : Describir brevemente el principio sobre el cual se basa el dispositivo.
+Para el correcto funcionamiento del controlador PID, se utilizaron las siguientes librerias:
+
+- [x] <Wire.h>
+- [x] <LiquidCrystal_I2C.h>
+- [x] <Adafruit_Sensor.h>
+- [x] <DHT.h>
 
 
-
-
-## $\textcolor{orange}{Librerias:}$
-
-> __Note__ : Mencionar las librerias que se utilizan para que el desarrollo pueda funcionar correctamente.
 
 
 
 ## $\textcolor{orange}{Codigo:}$
 
-> __Note__ : Se agrega codigo en C++ en el cual se estuvo trabajando.
+> __Note__ : Se agrega codigo en C++.
 
 ```c++
 
@@ -117,7 +117,8 @@ void loop() {
 
 ## $\textcolor{orange}{Simulacion:}$
 
-El dispositivo fue simulado en Wokwi.
+El funcionamiento del dispositivo se puede ver simulado en Wokwi.
+
 
 https://wokwi.com/projects/362829563574636545
 
