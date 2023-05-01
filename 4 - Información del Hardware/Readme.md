@@ -45,21 +45,6 @@ Como actuador se utiliza un rele del tipo HK4100F, el cual proporciona una corri
 
 
 
-
-
-
-
-## ${\color{orange}Descripcion\ del\ Dispositivo:}$ 
-
-> __Note__ :
-Aqui poner descripcion breve del sispositivo a construir, detallando los componentes.
-
-
-## ${\color{orange}Descripción\ del\ funcionamiento:}$
-
-> __Note__ :
-Aqui poner descripcion breve del principio de funcionamiento y sus aplicaciones.
-
 ## ${\color{orange}Circuito\ y\ esquema\ electrònico:}$
 
 > __Note__ :
@@ -82,7 +67,3 @@ Aqui poner fotos de la maqueta armada.
 > __Note__ :
 Aqui poner fotos del proceso de armado y de fotos varias.
 
-## ${\color{orange}PAPERS:}$
-
-> __Note__ :
-En esta carpeta encontraran documentacion de soporte de los diferentes componentes del proyecto.
