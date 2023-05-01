@@ -54,7 +54,7 @@ Aqui poner el esquema y circuito del dispositivo.
 ## ${\color{orange}Prototipo:}$
 
 > __Note__ :
-Aqui poner fotos del prototipo armado.
+https://drive.google.com/drive/folders/1cg5u__QccI5G5JXr3ysAmkHic7qy_h_h?usp=sharing
 
 
 ## ${\color{orange}Maquetacion:}$
