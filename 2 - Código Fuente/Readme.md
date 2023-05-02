@@ -17,8 +17,7 @@ Para el correcto funcionamiento del controlador PID, se utilizaron las siguiente
 
 - [x] <Wire.h>
 - [x] <LiquidCrystal_I2C.h>
-- [x] <Adafruit_Sensor.h>
-- [x] <DHT.h>
+- [x] <DHTesp.h>
 
 
 
@@ -30,28 +29,28 @@ Para el correcto funcionamiento del controlador PID, se utilizaron las siguiente
 
 ```c++
 
-#include <Wire.h>
+#include <DHTesp.h>
 #include <LiquidCrystal_I2C.h>
-#include <Adafruit_Sensor.h>
-#include <DHT.h>
+#include <Wire.h>
 
-#define DHT22_1_PIN 26
-#define DHT22_2_PIN 27
 #define RELAY_PIN 14
 #define TEMP_SET_PIN 34
-
-#define LCD_ADDRESS 0x27
+#define LCD_ADDRESS 0x3F
 #define LCD_COLUMNS 16
-#define LCD_ROWS 2
+#define LCD_ROWS 4
 
-DHT dht22_1(DHT22_1_PIN, DHT22);
-DHT dht22_2(DHT22_2_PIN, DHT22);
+DHTesp dht11_1;
+DHTesp dht11_2;
 
-double Kp = 2;
-double Ki = 5;
-double Kd = 1;
+const int pin1 = 26;
+const int pin2 = 27;
+
+double Kp =  8;//2
+double Ki = 10; //5
+double Kd = 0.08; //1
 double Ts = 1;
-double set_point = 25;
+//double set_point = 24; //OAG
+double set_point = 0; //pruebo esta otra
 double integral = 0;
 double error_prev = 0;
 double output = 0;
@@ -60,21 +59,28 @@ LiquidCrystal_I2C lcd(LCD_ADDRESS, LCD_COLUMNS, LCD_ROWS);
 
 void setup() {
   pinMode(RELAY_PIN, OUTPUT);
-  digitalWrite(RELAY_PIN, LOW);
+  //digitalWrite(RELAY_PIN, LOW);//codigo original
+  digitalWrite(RELAY_PIN, HIGH); // cambio estado a HIGH
+  Serial.begin(9600); //OAG
   lcd.init();
   lcd.backlight();
-  dht22_1.begin();
-  dht22_2.begin();
+
+  dht11_1.setup(pin1, DHTesp::DHT11); // inicializo el sensor
+  dht11_2.setup(pin2, DHTesp::DHT11); // inicializo el sensor
+
 }
 
 void loop() {
-  // Leer la temperatura de los sensores DHT22
-  float temp1 = dht22_1.readTemperature();
-  float hum1 = dht22_1.readHumidity();
-  float temp2 = dht22_2.readTemperature();
-  float hum2 = dht22_2.readHumidity();
-  float temp_avg = (temp1 + temp2) / 2.0;
 
+
+  float temp1 = dht11_1.getTemperature();
+  //float hum1 = dht11_1.getHumidity();
+
+  float temp2 = dht11_2.getTemperature();
+  //float hum2 = dht11_2.getHumidity();
+
+  float temp_avg = (temp1 + temp2) / 2.0;
+  
   // Leer el valor del potenciómetro en el pin 34
   int pot_value = analogRead(TEMP_SET_PIN);
 
@@ -92,7 +98,11 @@ void loop() {
   output = output > 100 ? 100 : output < 0 ? 0 : output;
 
   // Convertir la salida a un valor de 0 o 1 para el relé
-  int relay_output = temp_avg >= set_point ? 1 : 0;
+  //int relay_output = temp_avg >= set_point ? 1 : 0; // codigo original anterior
+
+  int relay_output = temp_avg >= set_point ? 0 : 1;
+
+
 
   // Controlar el relé con el valor de salida
   digitalWrite(RELAY_PIN, relay_output);
@@ -108,6 +118,20 @@ void loop() {
   lcd.print(set_point);
   lcd.print(" C");
   delay(1000);  
+
+  // Imprimir información de depuración - OAG
+  
+  Serial.print("Temperatura Ambiente: "); //OAG
+  Serial.println(temp_avg); //OAG
+  Serial.print("Set: "); //OAG
+  Serial.println(set_point); //OAG
+  Serial.print("La temperatura que mide el sensor 1 es:"); // MAS
+  Serial.println(temp1);
+  Serial.print("La temperatura que mide el sensor 2 es:"); // MAS
+  Serial.println(temp2);
+  Serial.print("La salida del rele esta en:"); // MAS
+  Serial.println(relay_output);
+ 
 }
 
 ```
@@ -126,7 +150,4 @@ https://wokwi.com/projects/362829563574636545
 
 
 
-## $\textcolor{orange}{PAPERS:}$
-
-> __Note__ : En esta carpeta encontraran documentacion de soporte de los diferentes componentes del proyecto.
 
