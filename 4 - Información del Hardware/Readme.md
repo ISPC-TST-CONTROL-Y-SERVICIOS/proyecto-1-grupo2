@@ -54,16 +54,22 @@ Aqui poner el esquema y circuito del dispositivo.
 ## ${\color{orange}Prototipo:}$
 
 > __Note__ :
-Aqui poner fotos del prototipo armado.
+
+![Detalle_5](https://user-images.githubusercontent.com/46485082/235775485-a15a460e-721d-4bb8-8805-4e0c4b8ad3b4.png)
+
+![Detalle_1](https://user-images.githubusercontent.com/46485082/235775583-016b1580-731e-49fd-bb3c-ce54e3315ff9.png)
+
+![Detalle_2](https://user-images.githubusercontent.com/46485082/235775626-251c0246-1a8c-4aae-884e-723c51b761e3.png)
+
+![Detalle_3](https://user-images.githubusercontent.com/46485082/235775721-3007e982-12f8-4cab-9e09-3fd5af7e9841.png)
+
+![Detalle_4](https://user-images.githubusercontent.com/46485082/235775808-7c0c7c43-54f9-465d-bf8d-df72c1c3a9e9.png)
+
+![image](https://user-images.githubusercontent.com/46485082/235776325-62549e0a-fc9c-4b50-92f7-8b95deb7c9b5.png)
 
 
-## ${\color{orange}Maquetacion:}$
 
-> __Note__ :
-Aqui poner fotos de la maqueta armada.
 
-## ${\color{orange}Fotos:}$
 
-> __Note__ :
-Aqui poner fotos del proceso de armado y de fotos varias.
+
 
