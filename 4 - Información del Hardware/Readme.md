@@ -47,8 +47,8 @@ Como actuador se utiliza un rele del tipo HK4100F, el cual proporciona una corri
 
 ## ${\color{orange}Circuito\ y\ esquema\ electrònico:}$
 
-> __Note__ :
-Aqui poner el esquema y circuito del dispositivo.
+![image](https://user-images.githubusercontent.com/46485082/235782573-9a9c74f9-9289-486f-bd5b-0ed623ab6804.png)
+
 
 
 ## ${\color{orange}Prototipo:}$
