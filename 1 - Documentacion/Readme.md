@@ -180,10 +180,6 @@ En resumen, el control PID  utiliza la información de los sensores para ajustar
 
 
 
-## $\textcolor{orange}{Esquema\ electrico\ del\ controlador:}$
 
-> __Note__ :
-
-Aqui se agrega  el esquema electrico del dispositivo.
 
 
