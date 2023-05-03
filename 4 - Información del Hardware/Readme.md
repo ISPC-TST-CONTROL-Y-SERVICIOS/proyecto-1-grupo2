@@ -67,9 +67,8 @@ Como actuador se utiliza un rele del tipo HK4100F, el cual proporciona una corri
 
 ![image](https://user-images.githubusercontent.com/46485082/235776325-62549e0a-fc9c-4b50-92f7-8b95deb7c9b5.png)
 
+## $\textcolor{orange}{Enlace\ al\ video:}$
 
-
-
-
+https://www.youtube.com/watch?v=wPcamfFnDqc
 
 
